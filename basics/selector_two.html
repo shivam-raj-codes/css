@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        body {
+            background-color: #212121;
+            color: aliceblue;
+        }
+
+        /* changing the state */
+        h1:hover{
+            background-color: orange;
+        }
+
+        button:hover {
+            background-color: #e03030;
+            padding: 10px;
+        }
+
+        /* selecting first child of div */
+        div:first-child {
+            background-color: #13e486;
+        }
+
+        /* selecting every second element of div */
+        div:nth-child(2n) {
+            background-color: #19033f;
+        }
+
+        /* at the end of every h1 content 'After !' will be attached, similarly we can add image. */
+        h1::after {
+            content: "After !";
+            color: #a70909;
+        }
+
+        p::first-letter {
+            background-color: #a70909;
+            padding: 100px;
+            padding: 8px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Lorem ipsum dolor sit amet.</h1>
+    <input disabled type="checkbox" name="" id="">
+    <button type="submit">Submit</button>
+
+    <h1>Hover</h1>
+    <button>Focus</button>
+    <input type="text" required="true">
+    <input type="checkbox">
+    <input type="text" disabled="true">
+
+    <div>
+        <div>One</div>
+        <div>Two</div>
+        <div>Three</div>
+    </div>
+
+    <h1>Pseudo before and after selector</h1>
+    <h2>First letter selector</h2>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas, eius. Quo cum perferendis repellendus dolore, ea porro aliquam corporis laborum?</p>
+</body>
+</html>
