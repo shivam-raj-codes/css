@@ -1,0 +1,39 @@
+/* * {
+    margin: 0px;
+    padding: 0px;
+} */
+
+h2 {
+    background-color: orange;
+
+    /* now position is changable */
+    position: relative; 
+    left: 100px;
+    top: 350px;
+}
+
+
+h3 {
+    background-color: pink;
+    /* fix my posi at top = 0px */
+    position: fixed;
+    top: 0px;
+    left: 50px;
+}
+
+
+h4 {
+    background-color: brown;
+    /* when the top becomes equals: 0px => stick me there */
+    position: sticky;
+    top: 0px;
+}
+
+p {
+    background-color: chartreuse;
+    position: absolute;
+    left: 50px;
+    top: 0px;
+    margin: 0px;
+    z-index: 10;
+}
