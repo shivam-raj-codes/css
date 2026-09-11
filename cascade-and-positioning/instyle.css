@@ -1,0 +1,36 @@
+h1 {
+    background-color: aqua;
+}
+
+/* .classA {
+    background-color: green;
+}
+
+#firstId {
+    background-color: pink;
+}
+
+li {
+    background-color: black;
+} */
+
+
+
+h1 {
+    background-color: pink;
+}
+
+h2 {
+    background-color: aquamarine !important;
+}
+
+
+/* 
+priority order (based on specificity):--
+ 0. !important (higher priority).
+ 1. inLine CSS(high priority).
+ 2. id.
+ 3. class.
+ 4. tag(h1, h2..)
+ 5. Ordering important(when priority ties) : below one will have high priorirty.
+ */
