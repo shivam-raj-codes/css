@@ -1,0 +1,47 @@
+body {
+    background-color: #414141;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+h1 {
+    text-align: center;
+    color: #ffffff;
+}
+
+#box {
+    background-color: #fff;
+    width: 406px;
+    height: 306px;
+    display: flex;
+    justify-content: center;
+}
+.container {
+    background-color: #CE1126;
+    margin: 3px;
+    width: 400px;
+    height: 300px;
+}
+
+.blue {
+    background-color: #002868;
+    width: 400px;
+    height: 180px;
+    margin-top: 60px;
+
+    position: relative;
+}
+
+.white {
+    background-color: #fff;
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
+
+    /* making it movable relative to blue */
+    position: absolute; 
+    left: 130px;
+    top: 20px;
+}
