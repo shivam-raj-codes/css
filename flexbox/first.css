@@ -1,0 +1,55 @@
+* {
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+    /* border-box = border-width + padding - width + content - width = width(600px) */
+    /* content-box = content-width = 300px */
+    /* same for height */
+}
+
+body {
+    background-color: #414141;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    /* body should take all window height not just only the div height=> so taht we can keep div at center */
+    height: 100vh;
+}
+
+.box {
+    width: 400px;
+    /* height: 400px; */
+
+    background-color: #fff;
+
+    /* as we have make box-sizing: border-box; universally taht is why 60px - padding count or apllied inside box that will be part of width: 600px & height:400px*/
+    padding: 60px; 
+
+    border-radius: 16px;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: rgb(79, 79, 200);
+}
+
+label {
+    font-size: 25px;
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+
+input {
+    width: 100%;
+    height: 30px;
+    padding: 10px;
+    font-size: 20px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+}
+
+.login {
+    cursor: pointer;
+}
