@@ -1,0 +1,99 @@
+body {
+    background-color: #515151;
+}
+
+/* parent div */
+/* display: flex works on the direct children of the flex container, regardless of whether those children are block-level or inline-level elements. */
+
+/* 
+🌟🌟🌟🌟
+parent - property: flex, flex-direction, justify, align, flex wrap
+
+ */
+
+.container {
+    /* as it is block ele will take height according to how much content is present inside it. */
+    background-color: antiquewhite;
+    height: 500px;
+
+    display: flex;
+    flex-direction: row;
+
+    /* justify content will work aways arround main-axisx */
+    /* & main-axis will be decided by flex direction */
+
+    /* justify-content: center; */
+    /* justify-content: end; */
+    /* justify-content: space-around; */
+    /* justify-content: space-between; */
+    /* justify-content: space-evenly; */
+
+    /* ------  cross - axis ------ */
+    /* if we want to around cross - axis */
+    /* align-items work around cross-axis */
+    /* align-items: center; */
+
+
+    /* to make content in center */
+    justify-content: center;
+    align-items: center;
+
+
+    /* flex-wrap : using this we can make flex box resposive for different different size of devices*/
+    /* prevent content from squeezing */
+    /* flex-wrap: wrap; */
+    gap: 10px;
+}
+
+.box {
+    height: 100px;
+    width: 100px;
+}
+
+/* 
+🌟🌟🌟🌟
+property we can apply on child :
+1. flex-grow : after space assign to all child by parent remain space will distribute child.
+  * by defalut all have flex-grow : 0
+
+2. flex-shrink:
+  * by defalut all have flex-shrink : 1 (=> all will shrink equally while sqeezing).
+
+3. flex-basis:  
+  * override the width if flex-direction is row & 
+  * if flex-direction is column override the height or inc. height
+
+4. align-self: arround cross-axis we an shift ele anywhere 
+*/
+
+.first {
+    background-color: orange;
+    /* total avialable is: 1 */
+    /* we are assigning 1/3 part of available to first */
+
+    /* flex-grow: 1; */
+
+    /* flex-basis : */
+    /* flex-basis: 200px; */
+}
+
+.second {
+    background-color: green;
+    /* we are assigning 1/3 part of available to first & 2/3 part to second*/
+
+    /* flex-grow: 2; */ 
+
+    /* while screen squeezing shink 4 - times faster than anyone else */
+    flex-shrink: 4; 
+}
+
+.third {
+    background-color: red;
+    
+    /* arround cross-axis will go at start */
+    align-self: flex-start;
+}
+
+.fourth {
+    background-color: chartreuse;
+}
