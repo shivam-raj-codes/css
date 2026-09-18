@@ -1,0 +1,56 @@
+
+
+/* 
+   🌟🌟🌟
+   Note: 
+   5 columns = 6 grid lines.
+   grid-column: 5 / 6 → occupies the 5th column.
+   End line is not included, similar to Python slicing.
+ */
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-size: 30px;
+}
+
+body {
+    background-color: #000;
+}
+
+.container {
+    display: grid;
+
+    /*🌟 Note: this way creating problem of overflow */
+    /* wants 2 rows & 2 cols of 200px & 200px
+    grid-template-rows: 200px 200px;
+    grid-template-columns: 200px 200px; */
+
+    /* we use fraction(fr) while creating row & col. */
+    /* fraction allocate width & height to the row & col according to avail space */
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
+
+    background-color: #fad3d3ac;
+    height: 400px;
+    width: 400px;
+
+    gap: 10px;
+}
+
+.first {
+    background-color: #e32121;
+}
+
+.second {
+    background-color: #39eeaf;
+}
+
+.third {
+    background-color: #6065e7;
+}
+
+.fourth {
+    background-color: #e32a77;
+}
