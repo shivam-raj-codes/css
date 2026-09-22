@@ -1,0 +1,29 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #fdfdfd;
+}
+
+
+.container {
+    width: 800px;
+    height: 800px;
+
+    display: grid;
+
+    /* 8 x 8 matrix */
+    grid-template-rows: repeat(8, 1fr);
+    grid-template-columns: repeat(8, 1fr);
+}
+
+.white {
+    background-color: #ddc5c5;
+}
+
+.brown {
+    background-color: #bd5555;
+}
