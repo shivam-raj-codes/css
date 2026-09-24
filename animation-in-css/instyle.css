@@ -1,0 +1,117 @@
+* {
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #000;
+}
+
+
+.container {
+    padding: 20px;
+
+    position: relative;
+}
+
+.box {
+    height: 100px;
+    width: 200px;
+    background-color: #9e1a0b;
+
+    /* to move box */
+    position: absolute;
+
+    /* animation - name : can be anything. */
+    animation-name: moving;
+
+    /* how long the animation takes to complete */
+    animation-duration: 5s;
+
+    /* how many times want to repeat animation*/
+    /* animation-iteration-count: infinite; */
+
+    animation-iteration-count: infinite;
+
+    /* 
+      🌟 for reference: https://www.w3schools.com/css/css3_animations_timing.asp
+      to control movement speed :
+      /* 
+       ease-in  → starts slowly, then speeds up
+       ease-out → starts quickly, then slows down
+       ease-in-out → starts slowly, speeds up, then slows down
+    */
+
+
+    /* animation-timing-function: ease-in; */
+
+    animation-timing-function: linear;
+
+
+    /* 
+        To change direction: go like this ->  & comes back like this: <-
+     */
+    /* animation-direction: alternate; */
+
+    /* After how much time animation should start: we use */
+    animation-delay: 2s;
+
+
+
+    /* if animation-iteration is : Infinite => No need of fill-mode */
+    /* animation-fill-mode: tell  */
+    /* animation-fill-mode: forwards; */
+
+    /* for backward color start showing in reverse */
+    /* animation-fill-mode: backwards; */
+}
+
+
+
+@keyframes moving {
+    /* from {
+        background-color: #d4820f;
+        
+        top: 10px;
+        left: 10px;
+    }
+    to {
+        background-color: #3232e8;
+        top: 10px;
+        left: 1000px;
+    } */
+
+    0% {
+        background-color: #d4820f;
+
+        top: 10px;
+        left: 10px;
+    }
+
+    25% {
+        background-color: #3232e8;
+        top: 10px;
+        left: 1000px;
+    }
+
+    50% {
+        background-color: #0cea04;
+        top: 500px;
+        left: 1000px;
+    }
+
+    75% {
+        background-color: #3232e8;
+        top: 500px;
+        left: 10px;
+    }
+
+    100% {
+        background-color: #d4820f;
+        top: 10px;
+        left: 10px;
+    }
+
+
+    /* 
+       H/W: read it:
+       https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/animation
+     */
+}
