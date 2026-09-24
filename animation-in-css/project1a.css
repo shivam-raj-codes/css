@@ -1,0 +1,50 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #0a0a0a;
+    display: flex;
+    justify-content: center;
+    padding-top: 20px;
+}
+
+.container {
+    background-color: #ffffff0d;
+    border: 1px solid #ffffff0d;
+
+    padding: 10px;
+    font-size: 40px;
+    color: #ffff;
+    width: 70%;
+    border-radius: 5px;
+
+    /* to stop wraping → keeps the text on one line */
+    white-space: nowrap;
+
+    /* saying to parent of <p> keep this <p> content overflow hidden */
+    overflow: hidden;
+}
+
+
+p {
+    animation-name: moving;
+
+    animation-duration: 10s;
+    
+    animation-iteration-count: infinite;
+
+    animation-timing-function: linear;
+}
+
+@keyframes moving {
+    from {
+        margin-left: 100%;
+    }
+
+    to {
+        margin-left: -100%;
+    }
+}
