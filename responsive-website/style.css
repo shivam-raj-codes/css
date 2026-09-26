@@ -1,0 +1,56 @@
+/* Default configuration: */
+.container {
+    height: 400px;
+    width: 400px;
+
+    font-size: 50px;
+    background-color: aqua;
+}
+
+
+/* if my device max-width is: 600px, then apply this css */
+/* @media screen and (max-width: 600px) {
+    .container {
+        height: 300px;
+        width: 300px;
+
+        font-size: 30px;
+        background-color: pink;
+    }
+}
+
+
+@media screen and (max-width: 900px) {
+    .container {
+        font-size: 40px;
+        background-color: green;
+    }
+} */
+
+
+/* min-width */
+/* @media screen and (min-width: 800px) {
+    .container {
+        font-size: 30px;
+        background-color: orange;
+    }
+} */
+
+
+/* 🌟🌟 in real - world we go with mobile first */
+
+/* here default is aplying mobile devices */
+/* and below extra config applying for tablet & mobile */
+@media screen and (min-width: 600px) {
+    .container {
+        font-size: 30px;
+        background-color: orange;
+    }
+}
+
+@media screen and (min-width: 900px) {
+    .container {
+        font-size: 30px;
+        background-color: green;
+    }
+}
