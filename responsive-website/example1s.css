@@ -1,0 +1,76 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    /* make container in center */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+
+    background-color: #070707;
+}
+
+/* 
+   1. Desktop — default
+   You haven't put your default CSS inside a media query:
+ */
+.container {
+    height: 200px;
+    width: 800px;
+
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 1fr;
+
+    gap: 5px;
+}
+
+.box {
+    background-color: #bdcf1e;
+}
+
+img {
+    height: 100%;
+    width: 100%;
+}
+
+
+/* 
+   2. Laptop — ≤ 900px
+   Then this overrides the relevant properties:
+ */
+@media screen and (max-width:900px) {
+    .container {
+        height: 400px;
+        width: 400px;
+
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+    }
+}
+
+/* 
+   🌟 Doubt: Why use Grid in media queries if Flexbox has flex-wrap?
+   ans : So you don't use Grid in a media query because Flexbox can't wrap.
+        You use Grid when your layout is naturally a row + column structure.
+
+        🌟 Flexbox: "Put these items in a line and let them wrap."
+        🌟 Grid: "I want this particular row/column structure."
+
+
+   3. Mobile — ≤ 900px
+   Then this overrides the relevant properties:
+ */
+@media screen and (max-width:500px) {
+    .container {
+        height: 800px;
+        width: 200px;
+
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr;
+    }
+}
