@@ -1,0 +1,57 @@
+.container {
+    height: 200px;
+    width: 200px;
+    background-color: #ffff00;
+
+    /* offset-x -> means in x - axis how much the shadow will be visible */
+    /* 🌟 if we give value as (negative for offset-x or offset-y) shadow start visible in opposite -x & +y axis. */
+    /*  box-shadow: offset-x offset-y blue*/
+
+    /* box-shadow: 10px 10px blue; */
+
+
+    /*
+       2. Blur - radius 
+    */
+
+    /* box-shadow: 20px 20px 10px #fff; */
+
+
+    /* 
+       3. spread - radius: represent by 4th val in box-shadow.
+       * original Shadow - length will be equals as box - length,
+        Hence, 🌟 we can increase shadow - length using using "spread - radius" from all the direction.
+     */
+
+    /* box-shadow: 0px 0px 10px 10px #fff; */
+
+    
+
+    /* 
+       4. inset : 
+       Doubt? With inset, why can't the shadow go outside the box when I use negative X/Y values?
+       ans: 🌟 That's essentially what inset means: "don't paint this shadow outside; paint it inside." 
+       * using this "inset" shadow start coming inward.
+     */
+
+     box-shadow: inset 10px 20px 10px #0000ff;
+
+
+
+
+     /* 
+       Assignment: Making Sun.
+      */
+
+
+      /* background-color: #F5B027;
+      border-radius: 50%;
+      box-shadow: 0px 0px 5px 10px #e73131; */
+
+
+
+      /* ###### 🌟 OVERFLOW 🌟 ####### */
+      background-color: #00ffff;
+
+      overflow: scroll;
+}
