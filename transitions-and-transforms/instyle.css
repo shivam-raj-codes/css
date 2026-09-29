@@ -1,0 +1,189 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    height: 100vh;
+    background-color: #000000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+
+    /* 🌟🌟🌟🌟🌟
+    Apply perspective on the parent (.container).
+    It gives the child elements a 3-D depth effect
+    when using 3-D transforms such as translateZ(),
+    rotateX() and rotateY().
+    
+    perspective = distance between the viewer and
+    the Z = 0 plane.
+    */
+    perspective: 800px;
+}
+
+.box {
+    height: 250px;
+    width: 250px;
+    background-color: #ffa500;
+    cursor: pointer;
+
+    /* border-radius: 50%; */
+
+
+    /* 🌟🌟🌟 TRANSITION 🌟🌟🌟 */
+
+    /* Apply transition on width */
+    /* transition-property: width; */
+
+    /* Apply transition on height */
+    /* transition-property: height; */
+
+
+    /* Apply transition on all properties */
+    /* 
+    transition-property: all;
+    transition-duration: 3s;
+    transition-timing-function: linear;
+    transition-delay: 2s;
+    */
+
+
+    /* Short-hand technique:
+       transition: property duration timing-function delay;
+    */
+
+    /* transition: all 3s ease-in 1s; */
+
+
+    /*
+    ******* 🌟 TRANSFORMS 🌟 ********
+    */
+
+    /* Transition is active */
+    /* transition: all 3s; */
+
+
+    /* 🌟 We can rotate an element using transform */
+    /* transform: rotate(40deg); */
+
+
+    /* 🌟 Skew in transforms
+       skew(), skewX(), skewY()
+    */
+
+    /* transform: skew(30deg); */
+
+
+    font-size: 50px;
+    color: #fff;
+
+
+    /* 🌟🌟🌟 ANIMATION 🌟🌟🌟 */
+
+    animation-name: moving;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+
+/* Using @keyframes, we can keep rotating the box. */
+
+@keyframes moving {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+
+/* Transition usually needs a trigger such as :hover or :focus.
+   Animation can run automatically using @keyframes.
+*/
+
+
+/* .box:hover { */
+
+    /* background-color: #ee5508;
+       width: 300px;
+       height: 400px;
+    */
+
+
+    /*
+    ******* 🌟 TRANSFORMS 🌟 ********
+    */
+
+
+    /*
+    Without using transform, when the transition changes
+    the size of one box, surrounding elements can also
+    be affected because the layout changes.
+
+    Transform changes the visual appearance/position
+    without changing the normal document layout.
+    */
+
+
+    /*
+    🌟 SCALE
+
+    scale(2)   → increases both width and height 2×
+    scaleX(2)  → increases width 2×
+    scaleY(2)  → increases height 2×
+    */
+
+    /* transform: scaleY(2); */
+
+
+    /*
+    🌟 TRANSLATE
+
+    translate(100px, 200px)
+    → moves 100px along the X-axis
+    → moves 200px along the Y-axis
+
+    Similarly:
+    translateX()
+    translateY()
+    */
+
+    /* transform: translate(100px, 200px); */
+
+
+    /*
+    🌟🌟🌟 3-D TRANSFORMATION (Z-axis) 🌟🌟🌟
+
+    To see the 3-D effect of transforms such as
+    translateZ(), apply perspective on the parent.
+    */
+
+
+    /*
+    translateZ(200px):
+    moves the element 200px towards the viewer.
+
+    A positive value moves it towards the viewer,
+    while a negative value moves it away.
+    */
+
+    /* transform: translateZ(200px); */
+
+
+    /*
+    rotateX(90deg):
+    rotates the element 90° around the X-axis.
+
+    Because perspective is set on the parent,
+    the rotation can produce a 3-D depth effect.
+    */
+
+    /* transform: rotateX(90deg); */
+
+/* } */
