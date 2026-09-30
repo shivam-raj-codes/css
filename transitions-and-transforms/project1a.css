@@ -1,0 +1,67 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    height: 100vh;
+    background-color: #000000;
+
+    /* position: relative; */
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.box {
+    height: 200px;
+    width: 200px;
+    background-color: #fe0303;
+    font-size: 40px;
+    font-weight: 900;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    /* position: absolute;
+    top: 50%;
+    left: 50%; */
+
+
+    /* 🌟 🌟 🌟 🌟 🌟*/
+    /* to center the div using transform: */
+    /*  translate(-50%, -50%) : means with respect to self height move -50% to right & -50% to down. */
+    /* transform: translate(-50%, -50%); */
+
+
+    animation-name: moving;
+    animation-duration: 4s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+
+    border-radius: 50%;
+}
+
+/* 
+First rotate() → rotates the element around the origin.
+translateX(200px) → moves the element away from the origin,
+creating a circular path.
+
+Last rotate() → rotates the element in the opposite direction
+so that the element itself stays upright while moving around the circle.
+*/
+@keyframes moving {
+    from {
+        transform: rotate(0deg) translateX(200px) rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg) translateX(200px) rotate(-360deg);
+    }
+}
+
+
+/* rotate() + translateX() combination circular/orbital movement create karta hai;
+ last opposite rotate() element ki own orientation ko compensate karta hai. */
